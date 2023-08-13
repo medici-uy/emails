@@ -1,6 +1,6 @@
 {
   "name": "@medici-uy/emails",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Email templates.",
   "type": "module",
   "main": "dist/index.js",
