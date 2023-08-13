@@ -14,7 +14,7 @@ export type Email = {
 };
 
 const subjects = {
-  welcome: '',
+  welcome: 'Bienvenido a medici',
 } as const;
 
 export async function getEmails(): Promise<Email[]> {
