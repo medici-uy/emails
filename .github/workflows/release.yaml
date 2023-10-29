@@ -7,6 +7,9 @@ permissions:
 on:
   workflow_dispatch:
 
+env:
+  DEBUG: ${{ vars.DEBUG }}
+
 jobs:
   release:
     runs-on: ubuntu-latest

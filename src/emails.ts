@@ -22,7 +22,7 @@ const subjects = {
 export async function getEmails(): Promise<Email[]> {
   const emails: Email[] = [];
   const templatesDir = await fs.opendir(path.join(__dirname, 'templates'));
-  debug(`templatesDir: ${templatesDir}`);
+  debug(`__dirname: ${__dirname}, templatesDir: ${templatesDir.path}`);
 
   for await (const dirent of templatesDir) {
     emails.push(await emailFromDirent(dirent));
