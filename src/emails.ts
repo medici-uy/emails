@@ -5,6 +5,8 @@ import path from 'node:path';
 
 import mjml2html from 'mjml';
 
+import { debug } from './helpers.js';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export type Email = {
@@ -20,6 +22,7 @@ const subjects = {
 export async function getEmails(): Promise<Email[]> {
   const emails: Email[] = [];
   const templatesDir = await fs.opendir(path.join(__dirname, 'templates'));
+  debug(`templatesDir: ${templatesDir}`);
 
   for await (const dirent of templatesDir) {
     emails.push(await emailFromDirent(dirent));
@@ -37,7 +40,9 @@ async function emailFromDirent(dirent: Dirent): Promise<Email> {
     dirent.name,
     path.extname(dirent.name),
   ) as keyof typeof subjects;
+  debug(`reading ${name} from ${dirent.path}`);
   const template = await fs.readFile(dirent.path, { encoding: 'utf-8' });
+  debug(`successfully read from ${dirent.path}`);
 
   return {
     name,
