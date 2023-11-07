@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 import mjml2html from 'mjml';
+import { registerComponent } from 'mjml-core';
 
 import { debug } from './helpers.js';
+import { MjLayout } from './components/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,6 +20,10 @@ export type Email = {
 const subjects = {
   welcome: 'Bienvenido a medici',
 } as const;
+
+for (const component of [MjLayout]) {
+  registerComponent(component);
+}
 
 export async function getEmails(): Promise<Email[]> {
   const emails: Email[] = [];
