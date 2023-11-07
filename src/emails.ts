@@ -21,9 +21,12 @@ const subjects = {
   welcome: 'Bienvenido a medici',
 } as const;
 
+debug('registering MJML components');
 for (const component of [MjLayout]) {
   registerComponent(component);
+  debug(`${component.getTagName()} registered`);
 }
+debug('MJML components registered');
 
 export async function getEmails(): Promise<Email[]> {
   const emails: Email[] = [];
