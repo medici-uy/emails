@@ -1,5 +1,11 @@
 <mjml>
   <mj-body>
-    <mj-layout></mj-layout>
+    <mj-layout>
+      <mj-section>
+        <mj-column>
+          <mj-heading>STATUS CHANGE!</mj-heading>
+        </mj-column>
+      </mj-section>
+    </mj-layout>
   </mj-body>
 </mjml>

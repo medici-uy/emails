@@ -37,9 +37,7 @@ export class MjLayout extends BodyComponent {
           <mj-divider border-color="#0511fa" border-width="2px"></mj-divider>
         </mj-column>
       </mj-section>
-        ${this.renderChildren(this.props.children, { rawXML: true })}
-      <mj-section>
-      </mj-section>
+      ${this.renderChildren(this.props.children, { rawXML: true })}
     `);
   }
 }

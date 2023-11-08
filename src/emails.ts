@@ -7,7 +7,7 @@ import mjml2html from 'mjml';
 import { registerComponent } from 'mjml-core';
 
 import { debug } from './helpers.js';
-import { MjLayout } from './components/index.js';
+import { MjLayout, MjHeading } from './components/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -22,7 +22,7 @@ const subjects = {
 } as const;
 
 debug('registering MJML components');
-for (const component of [MjLayout]) {
+for (const component of [MjLayout, MjHeading]) {
   registerComponent(component);
   debug(`${component.getTagName()} registered`);
 }
