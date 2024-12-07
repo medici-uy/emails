@@ -6,7 +6,6 @@ import {
   Preview,
   Section,
   Img,
-  Text,
   Tailwind,
   Link,
   Font,
@@ -14,7 +13,8 @@ import {
 import React from 'react';
 import { primaryColorHex, appDisplayName } from '@medici-uy/ui';
 
-import { Divider } from './Divider.js';
+import { Divider } from './Divider.tsx';
+import { Text } from './Text.tsx';
 
 export type LayoutProps = React.PropsWithChildren<{
   preview?: string;
@@ -50,7 +50,7 @@ export function Layout(props: LayoutProps) {
             <Section className="my-8">
               <Link href="https://medici.uy" target="_blank" rel="noopener">
                 <Img
-                  height={30}
+                  height={40}
                   src="https://raw.githubusercontent.com/medici-uy/identity/main/assets/logo-name-light.png"
                   className="mx-auto"
                   alt="Logo de medici."
@@ -60,7 +60,7 @@ export function Layout(props: LayoutProps) {
             <Divider />
             <div className="py-4">{props.children}</div>
             <Divider />
-            <Text className="text-tertiary">
+            <Text className="text-tertiary text-center text-sm">
               © {currentYear} {appDisplayName}
             </Text>
           </Container>
