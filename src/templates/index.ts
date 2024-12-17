@@ -1,1 +1,1 @@
-export * as welcome from './Welcome.js';
+export * as welcome from "./Welcome.js";

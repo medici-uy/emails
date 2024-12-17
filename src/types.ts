@@ -1,3 +1,6 @@
-import React from 'react';
+import type React from "react";
 
-export type ClassNameProp = Pick<React.HTMLAttributes<any>, 'className'>;
+export type ClassNameProp<T = HTMLElement> = Pick<
+	React.HTMLAttributes<T>,
+	"className"
+>;

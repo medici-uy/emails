@@ -1,1 +1,1 @@
-export { getEmails, type Email } from './emails.js';
+export { getEmails, type Email } from "./emails.js";

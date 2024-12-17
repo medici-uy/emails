@@ -1,3 +1,3 @@
-import debugLib from 'debug';
+import debugLib from "debug";
 
-export const debug = debugLib('@medici-uy/emails');
+export const debug = debugLib("@medici-uy/emails");

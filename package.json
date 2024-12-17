@@ -1,40 +1,36 @@
 {
-  "name": "@medici-uy/emails",
-  "version": "0.0.7",
-  "description": "Email templates.",
-  "type": "module",
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "email dev --dir src/templates --port 3001",
-    "build": "swc src --out-dir dist --copy-files src/templates --source-maps",
-    "prebuild": "rm --recursive --force dist",
-    "postbuild": "npm run typescript",
-    "typescript": "tsc",
-    "test": "node --test"
-  },
-  "dependencies": {
-    "@medici-uy/ui": "0.0.42",
-    "@react-email/components": "0.0.30",
-    "@react-email/render": "1.0.3",
-    "debug": "4.4.0",
-    "react": "19.0.0"
-  },
-  "devDependencies": {
-    "@swc/cli": "0.5.2",
-    "@swc/core": "1.10.0",
-    "@types/debug": "4.1.12",
-    "@types/react": "19.0.1",
-    "prettier": "3.4.2",
-    "react-email": "3.0.3",
-    "typescript": "5.7.2"
-  },
-  "imports": {
-    "#src/*": "./src/*",
-    "#components/*": "./src/components/*",
-    "#templates/*": "./src/templates/*"
-  },
-  "types": "dist/index.d.ts",
-  "author": "Diego Stratta <diego@medici.uy>",
-  "repository": "git@github.com:medici-uy/emails.git",
-  "license": "AGPL-3.0-or-later"
+	"name": "@medici-uy/emails",
+	"version": "0.0.7",
+	"description": "Email templates.",
+	"type": "module",
+	"exports": "./dist/index.js",
+	"scripts": {
+		"dev": "email dev --dir src/templates --port 3001",
+		"build": "swc src --out-dir dist --copy-files src/templates --source-maps",
+		"prebuild": "rm --recursive --force dist",
+		"postbuild": "npm run tsc",
+		"check": "biome check --write",
+		"tsc": "tsc",
+		"test": "node --test"
+	},
+	"dependencies": {
+		"@medici-uy/js-shared": "0.1.0",
+		"@react-email/components": "0.0.31",
+		"@react-email/render": "1.0.3",
+		"debug": "4.4.0",
+		"react": "19.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@swc/cli": "0.5.2",
+		"@swc/core": "1.10.1",
+		"@types/debug": "4.1.12",
+		"@types/react": "19.0.1",
+		"react-email": "3.0.4",
+		"typescript": "5.7.2"
+	},
+	"types": "dist/index.d.ts",
+	"author": "Diego Stratta <diego@medici.uy>",
+	"repository": "git@github.com:medici-uy/emails.git",
+	"license": "AGPL-3.0-or-later"
 }

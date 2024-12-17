@@ -1,10 +1,10 @@
-import { test } from 'node:test';
-import assert from 'node:assert/strict';
+import assert from "node:assert/strict";
+import { test } from "node:test";
 
-import { getEmails } from './emails.js';
+import { getEmails } from "./emails.js";
 
-test('getEmails reads the emails', async () => {
-  const emails = await getEmails();
+test("getEmails reads the emails", async () => {
+	const emails = await getEmails();
 
-  assert(emails.length >= 1);
+	assert(emails.length >= 1);
 });
