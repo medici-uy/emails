@@ -1,5 +1,5 @@
 {
-	"$schema": "https://json.schemastore.org/swcrc",
+	"$schema": "https://swc.rs/schema.json",
 	"jsc": {
 		"parser": {
 			"syntax": "typescript",
@@ -9,5 +9,7 @@
 			"react": { "runtime": "automatic", "useBuiltins": true }
 		},
 		"target": "esnext"
-	}
+	},
+	"sourceMaps": true,
+	"minify": true
 }

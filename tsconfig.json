@@ -25,7 +25,7 @@
 		"emitDecoratorMetadata": true,
 		"useUnknownInCatchVariables": true,
 		"allowImportingTsExtensions": true,
-		"rootDir": "."
+		"rootDir": "src"
 	},
 	"include": ["src/**/*"],
 	"exclude": ["node_modules", "dist"]
