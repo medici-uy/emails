@@ -1,5 +1,4 @@
-import { Hr } from "@react-email/components";
-import React from "react";
+import { Hr } from "react-email";
 
 export function Divider() {
 	return (

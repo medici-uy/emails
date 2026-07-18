@@ -1,7 +1,7 @@
-import { Heading } from "../components/Heading.tsx";
-import { Layout } from "../components/Layout.tsx";
-import { SignOff } from "../components/SignOff.tsx";
-import { Text } from "../components/Text.tsx";
+import { Heading } from "../components/Heading.js";
+import { Layout } from "../components/Layout.js";
+import { SignOff } from "../components/SignOff.js";
+import { Text } from "../components/Text.js";
 
 export function Template() {
 	return (

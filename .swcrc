@@ -6,7 +6,10 @@
 			"tsx": true
 		},
 		"transform": {
-			"react": { "runtime": "automatic", "useBuiltins": true }
+			"react": {
+				"runtime": "automatic",
+				"useBuiltins": true
+			}
 		},
 		"target": "esnext"
 	},

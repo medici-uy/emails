@@ -1,6 +1,6 @@
 {
 	"name": "@medici-uy/emails",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"description": "Email templates.",
 	"type": "module",
 	"exports": "./dist/index.js",
@@ -11,23 +11,22 @@
 		"postbuild": "npm run tsc",
 		"check": "biome check --write",
 		"tsc": "tsc",
-		"test": "node --test"
+		"test": "node --test dist"
 	},
 	"dependencies": {
-		"@medici-uy/js-shared": "0.1.0",
-		"@react-email/components": "0.0.31",
-		"@react-email/render": "1.0.3",
-		"debug": "4.4.0",
-		"react": "19.0.0"
+		"@medici-uy/js-shared": "0.1.5",
+		"debug": "4.4.3",
+		"react": "19.2.7"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@swc/cli": "0.5.2",
-		"@swc/core": "1.10.1",
-		"@types/debug": "4.1.12",
-		"@types/react": "19.0.1",
-		"react-email": "3.0.4",
-		"typescript": "5.7.2"
+		"@biomejs/biome": "2.5.4",
+		"@swc/cli": "0.8.1",
+		"@swc/core": "1.15.43",
+		"@tsconfig/strictest": "2.0.8",
+		"@types/debug": "4.1.13",
+		"@types/react": "19.2.17",
+		"react-email": "6.9.0",
+		"typescript": "7.0.2"
 	},
 	"types": "dist/index.d.ts",
 	"author": "Diego Stratta <diego@medici.uy>",

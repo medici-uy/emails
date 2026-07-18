@@ -1,4 +1,5 @@
 import { appDisplayName, primaryColorHex } from "@medici-uy/js-shared";
+import type React from "react";
 import {
 	Body,
 	Container,
@@ -10,8 +11,7 @@ import {
 	Preview,
 	Section,
 	Tailwind,
-} from "@react-email/components";
-import type React from "react";
+} from "react-email";
 
 import { Divider } from "./Divider.js";
 import { Text } from "./Text.js";

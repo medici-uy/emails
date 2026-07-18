@@ -1,8 +1,7 @@
-import { Text as BaseText } from "@react-email/components";
+import { Text as BaseText } from "react-email";
+import type { ClassNameProp } from "../types.ts";
 
-export type TextProps = React.PropsWithChildren<{
-	className?: string;
-}>;
+export type TextProps = React.PropsWithChildren<ClassNameProp>;
 
 export function Text(props: TextProps) {
 	return (

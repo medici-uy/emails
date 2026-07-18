@@ -1,8 +1,7 @@
+import type { ClassNameProp } from "../types.ts";
 import { Text } from "./Text.js";
 
-export type TextProps = React.PropsWithChildren<{
-	className?: string;
-}>;
+export type TextProps = React.PropsWithChildren<ClassNameProp>;
 
 export function SignOff(props: TextProps) {
 	return (

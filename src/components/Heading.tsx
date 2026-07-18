@@ -1,8 +1,7 @@
 import {
 	Heading as BaseHeading,
 	type HeadingProps as BaseHeadingProps,
-} from "@react-email/components";
-import React from "react";
+} from "react-email";
 
 export type HeadingProps = BaseHeadingProps;
 
